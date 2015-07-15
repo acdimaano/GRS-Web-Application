@@ -1,0 +1,171 @@
+<!--DOCTYPE html -->
+<html><head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>GRS Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+
+
+    <!-- Icon Fonts -->
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css">
+
+    <!-- Required CSS Files -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="loaded">
+    
+    <div class="loader" style="opacity: 0; display: none;">
+        <div class="animated rubberBand spinner"></div>
+    </div>
+
+    <!-- Layout Wrapper -->
+    <div class="layout-wrapper page" id="page">
+        
+    <div class="section page-title background-wrapper with-overlay white-overlay active-section">
+            <div class="background-image parallax-background" data-stellar-background-ratio="0.5" style="background: url(http://trainingdrills.co.uk/html/elements/demo/hero/big1.jpg) 0% 0%;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Welcome Back Patient</h1>
+                        <p class="">Please provide your NHI so we can pull up your record</p>
+                        <ol class="breadcrumb">
+                            <li><a href="patient_selectspecialty.html">Speciality</a></li>
+                        </ol>
+                    </div><!--/.col-->
+                </div><!--/.row-->
+            </div><!--/.container-->
+        </div><!-- /.section --><script type="text/javascript">
+                            jQuery(document).ready(function(){
+                                $("#template-contactform").validator().on('submit', function (e) {
+                                    $(this).ajaxSubmit({
+                                        target: '#contact-form-result',
+                                        success: function(response) {
+                                            $('.form-process').fadeOut();
+                                            $('#template-contactform').find('.form-control').val('');
+                                            $('#contact-form-result').html(response);
+                                            $('#contact-form-result').fadeIn();
+                                            console.log(response);
+                                        }
+                                    });
+                                    return false;
+                                })
+
+                            });
+
+                        </script><section class="section big-padding active-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form data-toggle="validator" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post" role="form" novalidate="true">
+
+                            <div class="form-process"></div>
+
+                            <div class="col-md-4 form-group">
+                                <label for="template-contactform-name">Name <small>*</small></label>
+                                <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control" required="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <label for="template-contactform-email">Email <small>*</small></label>
+                                <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="email form-control" required="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <label for="template-contactform-phone">Phone</label>
+                                <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="form-control">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="col-md-8 form-group">
+                                <label for="template-contactform-subject">Subject <small>*</small></label>
+                                <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="form-control" required="">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="col-md-4 form-group">
+                                <label for="template-contactform-service">Services</label>
+                                <select id="template-contactform-service" name="template-contactform-service" class="form-control">
+                                    <option value="">-- Select One --</option>
+                                    <option value="Wordpress">Wordpress</option>
+                                    <option value="PHP / MySQL">PHP / MySQL</option>
+                                    <option value="HTML5 / CSS3">HTML5 / CSS3</option>
+                                    <option value="Graphic Design">Graphic Design</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-12 form-group">
+                                <label for="template-contactform-message">Message <small>*</small></label>
+                                <textarea class="form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30" required=""></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="col-md-12 hidden form-group">
+                                <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control">
+                            </div>
+
+                            <div class="col-md-12">                                
+                                <p id="contact-form-result"></p>
+                                <br>
+                            </div><!--/.col-->
+
+                            <div class="col-md-12">
+                                <button class="btn btn-punch btn-xs btn-black disabled" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit" style="pointer-events: all; cursor: pointer;">Send Message</button>
+                            </div>
+
+                        </form><!--/.form-->
+                        
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.section --><section class="section black-background active-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+                            <li><a href="#" title="" class="strong-text">About</a></li>
+                            <li><a href="#" title="" class="strong-text">Blog</a></li>
+                            <li><a href="#" title="" class="strong-text">Help</a></li>
+                            <li><a href="#" title="" class="strong-text">Terms</a></li>
+                            <li><a href="#" title="" class="strong-text">Privacy</a></li>
+                        </ul>
+                    </div><!-- /.col -->
+                    <div class="col-md-6 text-right">
+                        <p>© 2015 - Material. by GeniusPro.</p>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.section --></div><!-- /.layout-wrapper -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.localscroll.min.js"></script>
+    <script src="js/jquery.scrollto.min.js"></script>
+    <script src="js/validator.min.js"></script>
+    <script src="js/jquery.form.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+
+</body></html>
